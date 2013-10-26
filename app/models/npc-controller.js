@@ -1,6 +1,6 @@
-var NpcController = function(npc_id, vida_atual, npc_x, npc_y, game_id){
+var NpcController = function(npc_id, hp, npc_x, npc_y, game_id){
 	var  _npc_id = npc_id,
-			_vida_atual = vida_atual,
+			_hp = hp_actual,
 			_npc_x = x,
 			_npc_y = y,
 			_attackable = false,
@@ -10,8 +10,8 @@ var NpcController = function(npc_id, vida_atual, npc_x, npc_y, game_id){
 		getNpcId : function(){
 			return _npc_id;
 		},
-		getVidaAtual : function(){
-			return _vida_atual;
+		getHp : function(){
+			return _hp;
 		},
 		getNpcX : function(){
 			return _npc_x;
