@@ -15,8 +15,9 @@ var FacadeNpcChild = function() {
 		return npc_controller;
 	}
 	
-	var _isValidMove = function(npc, x, y) {
-		return true;
+	var _isValidMove = function(npc, callback) {
+		var cb = callback || function(){};
+		cb(true);
 	}
 	
 	return {
