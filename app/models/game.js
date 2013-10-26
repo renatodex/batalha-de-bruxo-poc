@@ -1,7 +1,6 @@
 var Game = function(id, map_id){
 	var _id = id,
 			_map_id = map_id,
-			_npcs = [],
 			_initialized = false,
 			_game_state = 0,
 			_team_a = [],
@@ -20,20 +19,28 @@ var Game = function(id, map_id){
 		getGameState : function(){
 			return _game_state;
 		},
-		getNpcs : function(){
-			return _npcs;
-		},
 		getTeamA : function(){
 			return _team_a;
 		},
 		getTeamB : function(){
 			return _team_b;
 		},
-		addNpctoTeam : function(npc, team){
-			team.push(npc);
+		addNpctoTeam : function(npc, team_id){
+			if(team_id == 'A'){
+				_team_a.push(npc);
+			}else{
+				_team_b.push(npc);
+			}
 		},
-		removeNpcfromTeam : function(npc){
-			
+		removeNpcfromTeam : function(npc, team_id){
+			if(team_id == 'A'){
+				var team = _.without(_team_a, npc);
+				_team_a.push(team);
+			}else{
+				var team = _.without(_team_b, npc);
+				_team_b.push(team);
+			}
+
 		}
 	}
 }
