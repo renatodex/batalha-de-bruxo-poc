@@ -5,7 +5,7 @@ var ControllerNpcChild = function(){
 				npc.setNpcTileX(x);
 				npc.setNpcTileY(y);
 
-				CanvasNpcChild.render(npc);
+				CanvasNpcChild.render(npc);	
 			}else{
 				return false;
 			}
@@ -15,10 +15,7 @@ var ControllerNpcChild = function(){
 	_move_down = function(npc, x, y){
 		FacadeNpcChild.isValidMove(npc, function(valid){
 			if(valid){
-				npc.setNpcTileX(x);
-				npc.setNpcTileY(y);
-
-				CanvasNpcChild.move(npc);
+				CanvasNpcChild.move(npc, x, y);
 			}else{
 				return false;
 			}
