@@ -1,0 +1,8 @@
+var NpcChildCanvas = function() {
+	
+	
+	
+	return {
+		
+	}
+}();
