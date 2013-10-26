@@ -21,11 +21,17 @@ var NpcController = function(hp, npc_tile_x, npc_tile_y, game_id){
 		getHp : function(){
 			return _hp;
 		},
-		getNpcX : function(){
+		getNpcTileX : function(){
 			return _npc_tile_x;
 		},
-		getNpcY : function(){
+		getNpcTileY : function(){
 			return _npc_tile_y;
+		},
+		setNpcTileX : function(npc_tile_x){
+			_npc_tile_x = npc_tile_x;
+		},
+		setNpcTileY : function(npc_tile_y){
+			_npc_tile_y = npc_tile_y;
 		},
 		getGameId : function(){
 			return _game_id;
