@@ -15,8 +15,8 @@ var Game = function(id){
 		}
 	};
 	
-	_isValidTeam = function(npcs){
-		var valid = npcs.length % 2;
+	_isValidTeam = function(npcs_controllers){
+		var valid = npcs_controllers.length % 2;
 			if(valid == 0){
 				return true;
 			}else{
@@ -24,10 +24,10 @@ var Game = function(id){
 			}
 	};
 
-	_splitTeams = function(npcs){
-		if(_isValidTeam(npcs)){
-			var shufled = _.shuffle(npcs);
-			_.each(npcs, function(v,k){
+	_splitTeams = function(npcs_controllers){
+		if(_isValidTeam(npcs_controllers)){
+			var shufled = _.shuffle(npcs_controllers);
+			_.each(npcs_controllers, function(v,k){
 				if(_isPair(k)){
 					_team_a.push(v);
 				}else{
@@ -78,8 +78,8 @@ var Game = function(id){
 				_team_b.push(team);
 			}
 		},
-		setup : function(npcs){
-			return _splitTeams(npcs);
+		setup : function(npcs_controllers){
+			return _splitTeams(npcs_controllers);
 		}
 	}
 }
