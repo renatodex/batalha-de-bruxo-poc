@@ -4,7 +4,9 @@ var NpcController = function(hp, npc_tile_x, npc_tile_y, game_id){
 			_npc_tile_x = npc_tile_x,
 			_npc_tile_y = npc_tile_y,
 			_attackable = false,
-			_game_id = game_id 
+			_game_id = game_id,
+			_frame_width = 0,
+			_frame_height = 0;
 
 	return{
 		setNpc : function(npc){
@@ -31,6 +33,18 @@ var NpcController = function(hp, npc_tile_x, npc_tile_y, game_id){
 		setAttackable : function(attackable){
 			_attackable = attackable;
 			return _attackable;
-		}
+		},
+		setFrameWidth : function(frame_width){
+			_frame_width = frame_width;
+		},
+		setFrameHeight : function(frame_height){
+			_frame_height = frame_height;
+		},
+		getFrameWidth : function(){
+			return _frame_width;
+		},
+		getFrameHeight : function(){
+			return _frame_height;
+		},
 	}
 }
