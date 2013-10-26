@@ -6,6 +6,32 @@ var Game = function(id){
 			_game_state = 0,
 			_team_a = [],
 			_team_b = [];
+
+	_isPair = function(num){
+		var pair = num % 2;
+		if(pair == 0){
+			return true;
+		}else{
+			return false;
+		}
+	};
+
+	_splitTeams = function(npcs){
+		var par = npcs.length % 2;
+			if(par == 0){
+				var shufled = _.shufle(npcs),
+				_.each(npcs, function(v,k){
+					if(_isPair(k)){
+						_team_a.push(v);
+					}else{
+						_team_b.push(v);
+					}
+				});
+
+			}else{
+				return false;
+			}
+	};
 	
 	return{
 		getId : function(){
@@ -45,6 +71,9 @@ var Game = function(id){
 				team = _.without(_team_b, npc);
 				_team_b.push(team);
 			}
+		},
+		setup : function(npcs){
+			return _splitTeams(npcs);
 		}
 	}
 }
