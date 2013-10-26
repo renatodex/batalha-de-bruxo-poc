@@ -1,6 +1,7 @@
-var Game = function(id, map_id){
+var Game = function(id){
 	var _id = id,
 			_map_id = map_id,
+			_map = {},
 			_initialized = false,
 			_game_state = 0,
 			_team_a = [],
@@ -43,8 +44,11 @@ var Game = function(id, map_id){
 		getId : function(){
 			return _id;
 		},
-		getMapId : function(){
-			return _map_id;
+		setMap : function(map) {
+			_map = map;
+		},
+		getMap : function(){
+			return _map;
 		},
 		getInitialized : function(){
 			return _initialized;
