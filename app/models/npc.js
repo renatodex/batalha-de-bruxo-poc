@@ -1,7 +1,8 @@
 var Npc = function(id, name, sprite){
 	var _id = id,
 		_name = name,
-		_sprite = sprite;
+		_sprite = sprite,
+		_powers = [];
 
 	return {
 
@@ -15,6 +16,11 @@ var Npc = function(id, name, sprite){
 
 		getSprite : function(){
 			return _sprite;
+		},
+
+		setPowers : function(powers){
+			_powers = powers;
+			return _powers;
 		}
 	}
 }
