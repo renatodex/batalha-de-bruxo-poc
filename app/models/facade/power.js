@@ -8,7 +8,7 @@ var FacadePower = {
 				npc_id: 10,
 				damage_formula: '{atk}+1'
 			},{
-				id: 1,
+				id: 2,
 				name: 'Bola de Gelo Torada',
 				sprite: 'http://localhost:3000/boladegelo.png',
 				npc_id: 10,

@@ -21,6 +21,10 @@ var Npc = function(id, name, sprite){
 		setPowers : function(powers){
 			_powers = powers;
 			return _powers;
+		},
+
+		getPowers : function() {
+			return _powers;
 		}
 	}
 }
