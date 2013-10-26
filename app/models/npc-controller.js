@@ -7,20 +7,20 @@ var NpcController = function(vida_atual, npc_x, npc_y, game_id){
 
 	return{
 		getVidaAtual : function(){
-			return ;
+			return _vida_atual;
 		},
 		getNpcX : function(){
-			return ;
+			return _npc_x;
 		},
 		getNpcY : function(){
-			return ;
+			return _npc_y;
 		},
 		getGameId : function(){
-			return ;
+			return _game_id;
 		},
 		setAttackable : function(attackable){
 			_attackable = attackable;
-
+			return _attackable;
 		},
 	}
 }
