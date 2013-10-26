@@ -14,6 +14,6 @@ var FacadeMap = function() {
 	}
 	
 	return {
-		retrieve_by_id : _retrieve_by_id
+		retrieveById : _retrieve_by_id
 	}
 }()

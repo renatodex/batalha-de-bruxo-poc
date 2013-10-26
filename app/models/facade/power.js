@@ -1,5 +1,5 @@
-var FacadePower = {
-	retrieve_by_npc_id : function(npc_id) {
+var FacadePower = function() {
+	_retrieve_by_npc_id = function(npc_id) {
 		var _fake_powers = [
 			{
 				id: 1,
@@ -25,4 +25,8 @@ var FacadePower = {
 		
 		return powers;
 	}
-}
+	
+	return {
+		retrieveByNpcId:_retrieve_by_npc_id
+	}
+}()
