@@ -1,4 +1,4 @@
-var FacadeNpcController = function() {	
+var FacadeNpcChild = function() {	
 	var _create_npc_instance = function(npc_id) {
 		var _fake_instance = {
 			hp : 100,
@@ -8,7 +8,7 @@ var FacadeNpcController = function() {
 			game_id : 682398432
 		}
 
-		var npc_controller = new NpcController(_fake_instance['hp'], _fake_instance['npc_tile_x'], _fake_instance['npc_tile_y'], _fake_instance['attackable'], _fake_instance['game_id']);
+		var npc_controller = new NpcChild(_fake_instance['hp'], _fake_instance['npc_tile_x'], _fake_instance['npc_tile_y'], _fake_instance['attackable'], _fake_instance['game_id']);
 		var npc = FacadeNpc.retrieveById(npc_id)
 		npc_controller.setNpc(npc);
 		
