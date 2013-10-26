@@ -1,4 +1,4 @@
-var NpcController = function(hp, npc_tile_x, npc_tile_y, game_id){
+var NpcChild = function(hp, npc_tile_x, npc_tile_y, game_id){
 	var _npc = {},
 			_hp = hp,
 			_npc_tile_x = npc_tile_x,

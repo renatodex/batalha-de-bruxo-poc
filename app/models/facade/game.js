@@ -7,7 +7,7 @@ var FacadeGame = function() {
 		
 		var npcs = [];
 		_.each(npcs_id_list, function(v, k) {
-			npcs.push(FacadeNpcController.createNpcInstance(v))
+			npcs.push(FacadeNpcChild.createNpcInstance(v))
 		})
 		
 		var game = new Game(_fake_game['id'])
