@@ -4,6 +4,8 @@ var CanvasNpcChild = function() {
 		var x = npc_child.getNpcTileX();
 		var y = npc_child.getNpcTileY();
 		console.log('NPC Rendered!', x, y);
+		
+		
 	}
 	
 	return {
