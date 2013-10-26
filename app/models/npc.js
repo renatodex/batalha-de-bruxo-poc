@@ -1,4 +1,4 @@
-var npc = function(id, name, sprite){
+var Npc = function(id, name, sprite){
 	var _id = id,
 		_name = name,
 		_sprite = sprite;

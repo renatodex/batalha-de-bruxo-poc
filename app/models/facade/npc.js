@@ -1,5 +1,5 @@
-var NPC = {
-	retrieve_npc_by_id : function(id) {
+var FacadeNpc = {
+	retrieve_by_id : function(npc_id) {
 		var _fake_npc = {
 			id : 1,
 			name : 'Dalgun Samanad',
@@ -8,6 +8,6 @@ var NPC = {
 			powers : []
 		}
 		
-		return new NPC(_fake_npc['id'], _fake_npc['name'], _fake_npc['sprite'], _fake_npc['level'], _fake_npc['powers'])
+		return new Npc(_fake_npc['id'], _fake_npc['name'], _fake_npc['sprite'], _fake_npc['level'], _fake_npc['powers'])
 	}
 }
