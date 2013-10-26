@@ -1,4 +1,4 @@
-var NpcChildController = function(){
+var ControllerNpcChild = function(){
 	var _render = function(npc, x, y){
 		FacadeNpcChild.isValidMove(npc, function(valid){
 			if(valid){
