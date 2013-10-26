@@ -1,7 +1,4 @@
-var NpcChildCanvas = function() {
-	
-	
-	
+var CanvasNpcChild = function() {	
 	return {
 		
 	}
