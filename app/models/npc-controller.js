@@ -1,5 +1,5 @@
-var NpcController = function(npc_id, hp, npc_x, npc_y, game_id){
-	var  _npc_id = npc_id,
+var NpcController = function(hp, npc_x, npc_y, game_id){
+	var _npc = {},
 			_hp = hp,
 			_npc_x = npc_x,
 			_npc_y = npc_y,
@@ -7,6 +7,12 @@ var NpcController = function(npc_id, hp, npc_x, npc_y, game_id){
 			_game_id = game_id 
 
 	return{
+		setNpc : function(npc){
+			_npc = npc;
+		},
+		getNpc : function(){
+			return _npc;
+		},
 		getNpcId : function(){
 			return _npc_id;
 		},
