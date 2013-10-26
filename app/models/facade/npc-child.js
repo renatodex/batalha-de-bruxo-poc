@@ -13,9 +13,14 @@ var FacadeNpcChild = function() {
 		npc_controller.setNpc(npc);
 		
 		return npc_controller;
-	}	
+	}
+	
+	var _isValidMove = function(npc, x, y) {
+		return true;
+	}
 	
 	return {
-		createNpcInstance:_create_npc_instance
+		createNpcInstance:_create_npc_instance,
+		isValidMove:_isValidMove
 	}
 }()
