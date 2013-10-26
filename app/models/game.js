@@ -14,7 +14,7 @@ var Game = function(id){
 			return false;
 		}
 	};
-
+	
 	_isValidTeam = function(npcs){
 		var valid = npcs.length % 2;
 			if(valid == 0){
