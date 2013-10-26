@@ -3,23 +3,23 @@ var FacadePower = {
 		var _fake_powers = [
 			{
 				id: 1,
-				name: 'Fireball',
+				name: 'Bola de Gelo',
 				sprite: 'http://localhost:3000/fireball.png',
 				npc_id: 10,
 				damage_formula: '{atk}+1'
 			},{
-				id: 1,
-				name: 'Fireball',
-				sprite: 'http://localhost:3000/fireball.png',
+				id: 2,
+				name: 'Bola de Gelo Torada',
+				sprite: 'http://localhost:3000/boladegelo.png',
 				npc_id: 10,
-				damage_formula: '{atk}+1'
+				damage_formula: '{atk}+2'
 			}			
 		]
 		
 		var power;
 		var powers = [];
-		_.each(_fake_powers, function() {
-			power = new Power(_fake_powers[0]['id'], _fake_powers[0]['name'], _fake_powers[0]['sprite'], _fake_powers[0]['npc_id'], _fake_powers[0]['damage_formula']))
+		_.each(_fake_powers, function(value, key) {
+			power = new Power(_fake_powers[key]['id'], _fake_powers[key]['name'], _fake_powers[key]['sprite'], _fake_powers[key]['npc_id'], _fake_powers[key]['damage_formula'])
 			powers.push(power);
 		})
 		
