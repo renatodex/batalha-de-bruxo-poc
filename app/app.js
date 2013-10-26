@@ -17,7 +17,7 @@ var App = function() {
 
 		loader = new createjs.LoadQueue(false);
 		loader.addEventListener("complete", callback);
-		loader.loadManifest([{id:"image", src:"assets/images/hero_sprite.png"}]);
+		loader.loadManifest([{id:"image", src:"../assets/images/hero_sprite.png"}]);
 		loader.load();
 	}
 	
