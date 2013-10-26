@@ -30,7 +30,12 @@ var CanvasNpcChild = function() {
 		App.getStage().update();
 	}
 	
+	var _move = function(npc_child) {
+		
+	}
+	
 	return {
-		render:_render
+		render:_render,
+		move:_move
 	}
 }();
