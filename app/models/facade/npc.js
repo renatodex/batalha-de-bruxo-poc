@@ -3,7 +3,7 @@ var FacadeNpc = function() {
 		var _fake_npc = {
 			id : npc_id,
 			name : 'Dalgun Samanad',
-			sprite : 'http://localhost:3000/sprite1.png',
+			sprite : 'hero',
 			level : 1
 		}
 		

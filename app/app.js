@@ -1,11 +1,14 @@
 var App = function() {
+	var _loader;
+	var _stage;
+	
 	var _init = function(canvas_id, callback) {
 		_callback = callback || function() {};
-		stage = new createjs.Stage(canvas_id);
+		_stage = new createjs.Stage(canvas_id);
 
 		// grab canvas width and height for later calculations:
-		w = stage.canvas.width;
-		h = stage.canvas.height;
+		w = _stage.canvas.width;
+		h = _stage.canvas.height;
 
 		/*manifest = [
 			{src:"assets/runningGrant.png", id:"grant"},
@@ -15,14 +18,23 @@ var App = function() {
 			{src:"assets/parallaxHill2.png", id:"hill2"}
 		];*/
 
-		loader = new createjs.LoadQueue(false);
-		loader.addEventListener("complete", callback);
-		loader.loadManifest([{id:"image", src:"../assets/images/hero_sprite.png"}]);
-		loader.load();
+		_loader = new createjs.LoadQueue(false);
+		_loader.addEventListener("complete", callback);
+		_loader.loadManifest([{id:"hero", src:"../assets/images/hero_sprite.png"}]);
+		_loader.load();
 	}
 	
 	return {
-		init : _init
+		init : _init,
+		getLoader : function() {
+			return _loader;
+		},
+		getStage : function() {
+			return _stage;
+		}
+		/*getCanvas : function() {
+			return createjs;
+		}*/	
 	}
 }();
 

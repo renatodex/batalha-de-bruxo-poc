@@ -1,6 +1,8 @@
 var NpcChild = function(hp, npc_tile_x, npc_tile_y, game_id){
 	var _npc = {},
 			_hp = hp,
+			_npc_sprite_x = 0,
+			_npc_sprite_y = 0,
 			_npc_tile_x = npc_tile_x,
 			_npc_tile_y = npc_tile_y,
 			_attackable = false,
@@ -52,5 +54,17 @@ var NpcChild = function(hp, npc_tile_x, npc_tile_y, game_id){
 		getFrameHeight : function(){
 			return _frame_height;
 		},
+		setNpcSpriteX : function(npc_sprite_x){
+			_npc_sprite_x = npc_sprite_x;
+		},
+		setNpcSpriteY : function(npc_sprite_y){
+			_npc_sprite_y = npc_sprite_y;
+		},
+		getNpcSpriteX : function(){
+			return _npc_sprite_x;
+		},
+		getNpcSpriteY : function(){
+			return _npc_sprite_y;
+		},		
 	}
 }
