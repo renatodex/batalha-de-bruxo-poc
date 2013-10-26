@@ -15,21 +15,28 @@ var Game = function(id, map_id){
 		}
 	};
 
-	_splitTeams = function(npcs){
+	_isValidTeam = function(npcs){
 		var par = npcs.length % 2;
 			if(par == 0){
-				var shufled = _.shufle(npcs),
-				_.each(npcs, function(v,k){
-					if(_isPair(k)){
-						_team_a.push(v);
-					}else{
-						_team_b.push(v);
-					}
-				});
-
+				return true;
 			}else{
 				return false;
 			}
+	};
+
+	_splitTeams = function(npcs){
+		if(_isValidTeam(npcs)){
+			var shufled = _.shufle(npcs),
+			_.each(npcs, function(v,k){
+				if(_isPair(k)){
+					_team_a.push(v);
+				}else{
+					_team_b.push(v);
+				}
+			});
+		}else{
+			return false
+		}		
 	};
 	
 	return{
