@@ -26,7 +26,7 @@ var Game = function(id){
 
 	_splitTeams = function(npcs){
 		if(_isValidTeam(npcs)){
-			var shufled = _.shufle(npcs);
+			var shufled = _.shuffle(npcs);
 			_.each(npcs, function(v,k){
 				if(_isPair(k)){
 					_team_a.push(v);
