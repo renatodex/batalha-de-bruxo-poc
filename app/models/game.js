@@ -1,6 +1,5 @@
 var Game = function(id){
 	var _id = id,
-			_map_id = map_id,
 			_map = {},
 			_initialized = false,
 			_game_state = 0,
@@ -19,7 +18,7 @@ var Game = function(id){
 	_splitTeams = function(npcs){
 		var par = npcs.length % 2;
 			if(par == 0){
-				var shufled = _.shufle(npcs),
+				var shufled = _.shufle(npcs);
 				_.each(npcs, function(v,k){
 					if(_isPair(k)){
 						_team_a.push(v);
