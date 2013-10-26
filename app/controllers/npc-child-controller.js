@@ -10,8 +10,22 @@ var ControllerNpcChild = function(){
 				return false;
 			}
 		});
+	},
+
+	_move_down = function(npc, x, y){
+		FacadeNpcChild.isValidMove(npc, function(valid){
+			if(valid){
+				npc.setNpcTileX(x);
+				npc.setNpcTileY(y);
+
+				CanvasNpcChild.move(npc);
+			}else{
+				return false;
+			}
+		});
 	}
 	return{
-		render : _render
+		render : _render,
+		moveDown: _move_down 
 	}
 }()

@@ -31,6 +31,10 @@ var App = function() {
 		},
 		getStage : function() {
 			return _stage;
+		},
+		
+		update : function() {
+			_stage.update();
 		}
 		/*getCanvas : function() {
 			return createjs;
@@ -38,8 +42,11 @@ var App = function() {
 	}
 }();
 
+
 App.init('alcides', function() {
 	var game = FacadeGame.createGame([1,2,3,4], 40);
 	var npc_child = game.getTeamA()[0];
-	ControllerNpcChild.render(npc_child, 100, 101)
+	ControllerNpcChild.moveDown(npc_child, 0, 30)
+	
+	setInterval(App.update, 300)
 });

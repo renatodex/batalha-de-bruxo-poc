@@ -4,7 +4,7 @@ var FacadeNpcChild = function() {
 			hp : 100,
 			npc_tile_x : 12,
 			npc_tile_y : 24,
-			npc_frame_width: 36,
+			npc_frame_width: 64,
 			npc_frame_height: 52,
 			attackable : true,
 			game_id : 682398432
