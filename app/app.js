@@ -46,7 +46,7 @@ var App = function() {
 App.init('alcides', function() {
 	var game = FacadeGame.createGame([1,2,3,4], 40);
 	var npc_child = game.getTeamA()[0];
-	ControllerNpcChild.moveDown(npc_child, 0, 30)
+	ControllerNpcChild.moveDown(npc_child, 0, 100)
 	
-	setInterval(App.update, 300)
+	setInterval(App.update,200)
 });
