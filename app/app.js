@@ -20,7 +20,7 @@ var App = function() {
 
 		_loader = new createjs.LoadQueue(false);
 		_loader.addEventListener("complete", callback);
-		_loader.loadManifest([{id:"hero", src:"../assets/images/hero_sprite.png"}]);
+		_loader.loadManifest([{id:"hero", src:"../app/assets/images/hero_sprite.png"}]);
 		_loader.load();
 	}
 	
@@ -32,21 +32,45 @@ var App = function() {
 		getStage : function() {
 			return _stage;
 		},
-		
+		getTicker : function() {
+			return createjs.Ticker;
+		},
 		update : function() {
 			_stage.update();
-		}
-		/*getCanvas : function() {
-			return createjs;
-		}*/	
+		},
+		SpriteSheet : createjs.SpriteSheet,
+		Sprite : createjs.Sprite,
+		Tween : createjs.Tween
 	}
 }();
 
 
 App.init('alcides', function() {
 	var game = FacadeGame.createGame([1,2,3,4], 40);
-	var npc_child = game.getTeamA()[0];
-	ControllerNpcChild.moveDown(npc_child, 0, 100)
+	npc_child = game.getTeamA()[0];
 	
-	setInterval(App.update,200)
+	ControllerNpcChild.render(npc_child, 0, 100)
+	
+	App.getTicker().setFPS(80)
+	App.getTicker().on('tick', function(e) {
+		App.update();
+	})
 });
+
+$( "body" ).keydown(function( event ) {
+	if (event.which == 37) {
+		npc_child.getCanvas().walkLeft();
+	}
+	
+	if (event.which == 38) {
+		npc_child.getCanvas().walkUp();		
+	}
+	
+	if (event.which == 39)  {
+		npc_child.getCanvas().walkRight();
+	}
+	
+	if (event.which == 40) {
+		npc_child.getCanvas().walkDown();
+	}
+})

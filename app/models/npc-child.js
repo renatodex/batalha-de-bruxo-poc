@@ -8,7 +8,8 @@ var NpcChild = function(hp, npc_tile_x, npc_tile_y, game_id){
 			_attackable = false,
 			_game_id = game_id,
 			_frame_width = 0,
-			_frame_height = 0;
+			_frame_height = 0,
+			_canvas = {};
 
 	return{
 		setNpc : function(npc){
@@ -65,6 +66,12 @@ var NpcChild = function(hp, npc_tile_x, npc_tile_y, game_id){
 		},
 		getNpcSpriteY : function(){
 			return _npc_sprite_y;
-		},		
+		},
+		setCanvas : function(canvas) {
+			_canvas = canvas;
+		},
+		getCanvas : function() {
+			return _canvas;
+		}
 	}
 }
